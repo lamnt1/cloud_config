@@ -7,47 +7,7 @@ eureka:
       defaultZone: http://192.168.1.9:8761/eureka/
   instance:
     hostname: localhost
-spring:
-  cloud:
-    gateway:
-      lobalcors:
-        add-to-simple-url-handler-mapping: true
-        cors-configurations:
-          '[/**]':
-            allow-credentials: true
-            allowed-origins: '*'
-            allowed-headers: '*'
-            allowed-methods:
-            - OPTIONS
-            - GET
-            - POST
-            - PUT
-      discovery:
-        locator:
-          enabled: true
-          lowerCaseServiceId: true
-      routes:
-        - id: USER-SERVICE
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/users/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: USER-SERVICE
-                fallbackuri: forward:/userServiceFallBack
-        - id: DEPARTMENT-SERVICE
-          uri: lb://DEPARTMENT-SERVICE
-          predicates:
-            - Path=/departments/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: DEPARTMENT-SERVICE
-                fallbackuri: forward:/departmentServiceFallBack
-      loadbalancer:
-            ribbon:
-              enabled: false
+
 hystrix:
   command:
     fallbackcmd:
