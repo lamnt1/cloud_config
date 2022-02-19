@@ -10,6 +10,22 @@ eureka:
 spring:
   cloud:
     gateway:
+      lobalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allow-credentials: true
+            allowed-origins: '*'
+            allowed-headers: '*'
+            allowed-methods:
+            - OPTIONS
+            - GET
+            - POST
+            - PUT
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
       routes:
         - id: USER-SERVICE
           uri: lb://USER-SERVICE
@@ -29,6 +45,9 @@ spring:
               args:
                 name: DEPARTMENT-SERVICE
                 fallbackuri: forward:/departmentServiceFallBack
+      loadbalancer:
+            ribbon:
+              enabled: false
 hystrix:
   command:
     fallbackcmd:
@@ -37,6 +56,9 @@ hystrix:
           thread:
             timeoutInMilliseconds: 4000
 management:
+  endpoint:
+    gateway:
+      enabled: true
   endpoints:
     web:
       exposure:
