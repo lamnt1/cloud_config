@@ -4,7 +4,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://192.168.1.9:8761/eureka/
+      defaultZone: http://192.168.1.8:8761/eureka/
 
 hystrix:
   command:
