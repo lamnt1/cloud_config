@@ -1,21 +1,7 @@
-server:
-  security:
-    user:
-      name: lamnt
-      password: 123456
-
+profile: sit
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://192.168.1.9:8761/eureka/
-  instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-
-encrypt:
-  key-store:
-    location: classpath:config-server.keystore
-    alias: Config-Server
-    password: 123456
-    secret: 654321
