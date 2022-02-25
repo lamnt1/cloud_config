@@ -6,6 +6,22 @@ eureka:
     service-url:
       defaultZone: http://192.168.1.9:8761/eureka/
 
+security:
+  basic:
+    enabled: false
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: user-service,deparment-service,authentication-service
+  clusterNameExpression: new String("default")
+
+spring:
+  rabbitmq:
+    host: 192.168.1.8
+    port: 5672
+    username: guest
+    password: guest
+
 hystrix:
   dashboard:
     proxy-stream-allow-list: "*"
