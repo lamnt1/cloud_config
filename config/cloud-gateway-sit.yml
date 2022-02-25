@@ -7,12 +7,20 @@ eureka:
       defaultZone: http://192.168.1.9:8761/eureka/
 
 hystrix:
+  threadpool.default.coreSize: "20"
+  threadpool.default.maxQueueSize: "500000"
+  threadpool.default.keepAliveTimeMinutes: "2"
+  threadpool.default.queueSizeRejectionThreshold: "500000"
   command:
-    fallbackcmd:
+    default:
+      fallback.isolation.semaphore.maxConcurrentRequests: "20"
       execution:
+        timeout:
+          enabled: "false"
         isolation:
+          strategy: "THREAD"
           thread:
-            timeoutInMilliseconds: 4000
+            timeoutInMilliseconds: "30000"
 management:
   endpoint:
     gateway:
