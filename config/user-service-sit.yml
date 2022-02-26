@@ -15,7 +15,7 @@ spring:
     host: 192.168.1.8
     username: admin
     password: admin
-    port: 5672
+    port: 15672
     exchange: saga.partern.sit
     queue: saga.partern.sit
     routingKey: saga.partern.sit
