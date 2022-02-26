@@ -19,4 +19,4 @@ spring:
     exchange: saga.pattern.direct.sit
     queue: saga.pattern.direct.sit
     routingKey: saga.pattern.direct.sit
-    virtualHost: saga
+    virtualHost: /saga
