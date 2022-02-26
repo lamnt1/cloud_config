@@ -1,4 +1,3 @@
-signing-key: 2cec40f81d0ef7304b93bf653a54680f
 profile: sit
 eureka:
   client:
