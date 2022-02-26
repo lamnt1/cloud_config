@@ -14,8 +14,8 @@ rabbitmq:
     host: 192.168.1.8
     username: admin
     password: admin
-    port: 15672
-    exchange: tcbs.bbs.bondfeemanagement.bondbaseinfo.sit
-    queue: tcbs.bbs.bondfeemanagement.bondbaseinfo.sit
-    routingkey: tcbs.bbs.bondfeemanagement.bondbaseinfo.sit
-    virtualhost: saga
+    port: 5672
+    exchange: saga.partern.sit
+    queue: saga.partern.sit
+    routingKey: saga.partern.sit
+    virtualHost: saga
