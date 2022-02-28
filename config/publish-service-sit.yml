@@ -16,5 +16,5 @@ spring:
     password: admin
     port: 15672
     exchange: saga.pattern.topic.sit
-    routingKey: saga.pattern.service.user.xxx
+    routingKey: saga.pattern.service.department
     virtualHost: /saga
