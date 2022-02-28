@@ -16,8 +16,15 @@ spring:
     username: admin
     password: admin
     port: 15672
-    exchange: saga.pattern.topic.sit
-    queue: saga.pattern.fanout.sit
-    routingKey: sg.fanout.#
+    exchange:
+      direct: saga.pattern.direct.sit
+      topic: saga.pattern.topic.sit
+      fanout: saga.pattern.fanout.sit
+    queue:
+      direct: saga.pattern.direct.sit
+      topic: saga.pattern.topic.user.sit
+      fanout: saga.pattern.fanout.sit
+    routingKey:
+      direct: saga.pattern.service.user
+      topic: saga.pattern.service.user.*
     virtualHost: /saga
-    typeExchange: topic
