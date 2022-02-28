@@ -12,8 +12,8 @@ spring:
     base-url: http://192.168.1.8:9411/
   rabbitmq:
     host: 192.168.1.8
-    username: admin
-    password: admin
+    username: maker
+    password: maker
     port: 15672
     exchange:
       direct:
