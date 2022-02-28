@@ -47,5 +47,5 @@ spring:
         auto-delete: false
     routingKey:
       direct: saga.pattern.direct.user
-      topic: saga.pattern.service.user.*
+      topic: saga.pattern.service.*
     virtualHost: /saga
