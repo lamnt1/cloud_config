@@ -42,6 +42,6 @@ spring:
         durability: true
         auto-delete: false
     routingKey:
-      direct: saga.pattern.service.department
+      direct: saga.pattern.direct.department
       topic: saga.pattern.service.department.*
     virtualHost: /saga
