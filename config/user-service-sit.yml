@@ -18,6 +18,6 @@ spring:
     port: 15672
     exchange: saga.pattern.topic.sit
     queue: saga.pattern.topic.sit
-    routingKey: saga.pattern.service.user
+    routingKey: saga.pattern.service.*
     virtualHost: /saga
     typeExchange: topic
