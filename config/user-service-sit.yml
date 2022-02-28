@@ -17,13 +17,31 @@ spring:
     password: admin
     port: 15672
     exchange:
-      direct: saga.pattern.direct.sit
-      topic: saga.pattern.topic.sit
-      fanout: saga.pattern.fanout.sit
+      direct:
+        name: saga.pattern.direct.sit
+        durability: true
+        auto-delete: false
+      topic:
+        name: saga.pattern.topic.sit
+        durability: true
+        auto-delete: false
+      fanout:
+        name: saga.pattern.fanout.sit
+        durability: true
+        auto-delete: false
     queue:
-      direct: saga.pattern.direct.sit
-      topic: saga.pattern.topic.user.sit
-      fanout: saga.pattern.fanout.sit
+      direct:
+        name: saga.pattern.direct.sit
+        durability: true
+        auto-delete: false
+      topic:
+        name: saga.pattern.topic.user.sit
+        durability: true
+        auto-delete: false
+      fanout:
+        name: saga.pattern.fanout.sit
+        durability: true
+        auto-delete: false
     routingKey:
       direct: saga.pattern.service.user
       topic: saga.pattern.service.user.*
