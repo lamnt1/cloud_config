@@ -39,7 +39,7 @@ spring:
         durability: true
         auto-delete: false
       fanout:
-        name: saga.pattern.fanout.sit
+        name: saga.pattern.fanout.user.sit
         durability: true
         auto-delete: false
     routingKey:
